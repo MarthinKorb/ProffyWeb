@@ -8,10 +8,10 @@ Aplicação que une proffys e alunos
 ----------------------------------------------------
 
 <p align="center" border-radius="4px">
-<img src=".github/proffy1.png" width=800">
-<img src=".github/proffy2.png" width=800">
-<img src=".github/proffy3.png" width=800">
-<img src=".github/proffy4.png" width=800">
+<img src=".github/proffy1.png" width="800">
+<img src=".github/proffy2.png" width="800">
+<img src=".github/proffy3.png" width="800">
+<img src=".github/proffy4.png" width="800">
 </p>
 
 
