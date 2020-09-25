@@ -20,7 +20,7 @@ Aplicação que une proffys e alunos
 
 Clone esse repositório rodando:
 
-    git clone https://github.com/MarthinKorb/GithubExplorer
+    git clone https://github.com/MarthinKorb/ProffyWeb.git
 
 
 ----------------------------------------------------
@@ -33,9 +33,14 @@ Agora vamos iniciar nosso front-end:
 
     yarn start
 
+____________________________________________________
+Após, você pode clonar o repositório da API:
+
+     git clone https://github.com/MarthinKorb/ProffyServer.git
+
 **Feito!** ✔
 
-Agora é só adicionar os seus repositórios na sua lista!
+Agora é só buscar Proffys ou se cadastrar e se tornar um Proffy!
 
 ----------------------------------------------------
 
