@@ -1,4 +1,4 @@
-# Proffy
+# Proffy Web
 
 Aplicação que une proffys e alunos
 
