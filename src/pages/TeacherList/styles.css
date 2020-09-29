@@ -5,7 +5,6 @@
 
 #search-teachers {
     margin-top: 3.2rem;
-    ;
 }
 
 #search-teachers label {
@@ -35,7 +34,17 @@
 
 #page-teacher-list main {
     margin: 3.2rem auto;
-    width: 90%;
+    width: 100%;
+}
+
+.warning {
+    flex-direction: column;
+    font-size: 700 2.4rem Archivo;
+    padding-bottom: 10rem;
+}
+.warning img {
+    max-width: 8rem;
+    margin-bottom: 1.6rem;
 }
 
 @media(min-width: 700px) {
@@ -58,5 +67,12 @@
         padding: 3.2rem 0;
         max-width: 740px;
         margin: 0 auto;
+    }
+    .warning {
+        flex-direction: column;
+    }
+    .warning img{
+        max-width: 12rem;
+        margin-bottom: 1.6rem;
     }
 }

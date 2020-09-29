@@ -75,24 +75,28 @@ function TeacherForm() {
                             name="name"
                             label="Nome completo"
                             value={name}
+                            placeholder="Ex: João da Silva"
                             onChange={(e) => { setName(e.target.value) }}
                         />
                         <Input
                             name="avatar"
                             label="Avatar"
                             value={avatar}
+                            placeholder="Ex: https://myAvatar_url"
                             onChange={(e) => { setAvatar(e.target.value) }}
                         />
                         <Input
                             name="whatsapp"
                             label="Whatsapp"
                             value={whatsapp}
+                            placeholder="Ex: 51999999999"
                             onChange={(e) => { setWhatsapp(e.target.value) }}
                         />
                         <Textarea
                             name="bio"
                             label="Biografia"
                             value={bio}
+                            placeholder="Ex: Professor de ..."
                             onChange={(e) => { setBio(e.target.value) }}
                         />
 
@@ -123,6 +127,11 @@ function TeacherForm() {
                             name="cost"
                             label="Custo da sua hora por aula"
                             value={cost}
+                            placeholder="Ex: 50"
+                            type="number"
+                            min="0"
+                            max="1000"
+                            step="5"
                             onChange={(e) => { setCost(e.target.value) }}
                         />
 

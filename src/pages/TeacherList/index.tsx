@@ -4,29 +4,41 @@ import TeacherItem from '../../components/TeacherItem';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 
-import './styles.css';
 import api from '../../services/api';
+import './styles.css';
+
+import memeImg from '../../assets/images/meme.png';
+import chooseImg from '../../assets/images/choose.png';
 
 function TeacherList() {
 
     const [teachers, setTeachers] = useState([]);
+    const [isThereTeacher, setIsThereTeacher] = useState(true);
+    const [loading, setLoading] = useState(true);
+    const [isEmpty, setIsEmpty] = useState(true);
 
     const [subject, setSubject] = useState('');
     const [week_day, setWeekDay] = useState('');
     const [time, setTime] = useState('');
 
     async function searchTeachers(e: FormEvent) {
-        e.preventDefault();       
-        
+        e.preventDefault();
+            
         const response = await api.get('/classes', {            
             params: {
                 subject,
                 week_day,
                 time,
             }
-        });
-        console.log(response.data)
+        });       
         setTeachers(response.data);
+        setIsEmpty(false);
+
+        if(response.data.length < 1){
+            setIsThereTeacher(false);
+        } else {
+            setIsThereTeacher(true);
+        }        
     }
     return (
         <div id="page-teacher-list" className="container">
@@ -75,9 +87,32 @@ function TeacherList() {
             </PageHeader>
 
             <main>
+                {isEmpty && 
+                    <div className="warning" style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginTop: 40
+                    }}>
+                        <img src={chooseImg} alt=""/>
+                        <span>Selecione a matéria que quer aprender, o melhor dia e o horário... </span>
+                    </div>
+                }
                 {teachers && teachers.map(teacher => (
                     <TeacherItem key={teacher['id']} teacher={teacher} />
                 ))}
+                {!isThereTeacher && 
+                    <div className="warning" style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginTop: 40
+                    }}>
+                        <img src={memeImg} alt=""/>
+                        <h2>Ops...</h2>
+                        <span>There is no Teacher available...</span>
+                    </div>
+                }
             </main>
         </div>
     );

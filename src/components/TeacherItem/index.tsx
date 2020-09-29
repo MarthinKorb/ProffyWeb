@@ -1,7 +1,8 @@
 import React from 'react';
 
-import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 import api from '../../services/api';
+
+import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
 
@@ -23,7 +24,7 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
         api.post('/connections', {
             user_id: teacher.id,
         });
-        console.log('Nova conexão criada!')
+        //console.log('Nova conexão criada!')
     }
     return (
         <article className="teacher-item">
